@@ -5,8 +5,6 @@ import { AppService } from './app.service';
 import { DatabaseModule } from './core/database/database.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
-import { AddressModule } from './modules/address/address.module';
-import { UsersController } from './modules/users/users.controller';
 
 @Module({
   imports: [
@@ -14,9 +12,8 @@ import { UsersController } from './modules/users/users.controller';
     DatabaseModule,
     UsersModule,
     AuthModule,
-    AddressModule,
   ],
-  controllers: [AppController, UsersController],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
