@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "3d1cd75e-6bdd-4f69-96be-d1256a4a3f91",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25004155"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"firstName\",\n    \"lastName\": \"lastName\",\n    \"email\": \"email@email.co\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"firstName\",\n    \"lastName\": \"lastName\",\n    \"email\": \"email@email.co\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "513"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"201-TqEgnP5wLWLeEBpjNEyYnAjvTcM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Feb 2023 08:40:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 1,\n        \"firstName\": \"firstName\",\n        \"lastName\": \"lastName\",\n        \"email\": \"email@email.co\",\n        \"updatedAt\": \"2023-02-05T08:40:51.114Z\",\n        \"createdAt\": \"2023-02-05T08:40:51.114Z\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3ROYW1lIjoiZmlyc3ROYW1lIiwibGFzdE5hbWUiOiJsYXN0TmFtZSIsImVtYWlsIjoiZW1haWxAZW1haWwuY28iLCJ1cGRhdGVkQXQiOiIyMDIzLTAyLTA1VDA4OjQwOjUxLjExNFoiLCJjcmVhdGVkQXQiOiIyMDIzLTAyLTA1VDA4OjQwOjUxLjExNFoiLCJpYXQiOjE2NzU1ODY0NTEsImV4cCI6MTY3NTU5MDA1MX0.qCxmJNScEVQU2NjIjjG4Z19Ho6_nHQl5mxkbiFBrgL4\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"email@email.co\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "email@email.co",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "513"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"201-L6fzZfX0b+89ctdp8v7JahDQio8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Feb 2023 09:21:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 1,\n        \"firstName\": \"firstName\",\n        \"lastName\": \"lastName\",\n        \"email\": \"email@email.co\",\n        \"createdAt\": \"2023-02-05T08:40:51.114Z\",\n        \"updatedAt\": \"2023-02-05T08:40:51.114Z\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3ROYW1lIjoiZmlyc3ROYW1lIiwibGFzdE5hbWUiOiJsYXN0TmFtZSIsImVtYWlsIjoiZW1haWxAZW1haWwuY28iLCJjcmVhdGVkQXQiOiIyMDIzLTAyLTA1VDA4OjQwOjUxLjExNFoiLCJ1cGRhdGVkQXQiOiIyMDIzLTAyLTA1VDA4OjQwOjUxLjExNFoiLCJpYXQiOjE2NzU1ODg4NjUsImV4cCI6MTY3NTU5MjQ2NX0.4sEaNjVNYvoisw71hIHGWY_2twkpbasRYvth2ybQAyk\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3ROYW1lIjoiZmlyc3ROYW1lIiwibGFzdE5hbWUiOiJsYXN0TmFtZSIsImVtYWlsIjoiZW1haWxAZW1haWwuY28iLCJjcmVhdGVkQXQiOiIyMDIzLTAyLTA1VDA4OjQwOjUxLjExNFoiLCJ1cGRhdGVkQXQiOiIyMDIzLTAyLTA1VDA4OjQwOjUxLjExNFoiLCJpYXQiOjE2NzU1ODg4NjUsImV4cCI6MTY3NTU5MjQ2NX0.4sEaNjVNYvoisw71hIHGWY_2twkpbasRYvth2ybQAyk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get User Info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "157"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9d-tItyoQLGZd2olpzii7KY8z6MXvw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Feb 2023 09:29:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"firstName\": \"firstName\",\n    \"lastName\": \"lastName\",\n    \"email\": \"email@email.co\",\n    \"createdAt\": \"2023-02-05T08:40:51.114Z\",\n    \"updatedAt\": \"2023-02-05T08:40:51.114Z\"\n}"
+				}
+			]
+		}
+	]
+}
